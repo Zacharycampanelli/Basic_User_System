@@ -46,7 +46,6 @@ router.post('/', (req, res) => {
         req.session.user_id = dbUserData.id;
         req.session.username = dbUserData.username;
         req.session.loggedIn = true;
-
         res.json(dbUserData);
       });
     })
@@ -75,7 +74,7 @@ router.post('/login', (req, res) => {
         return;
     }
 
-    req.session.seave(() => {
+    req.session.save(() => {
         req.session.user_id = dbUserData.id;
         req.session.username = dbUserData.username;
         req.session.loggedIn = true;
