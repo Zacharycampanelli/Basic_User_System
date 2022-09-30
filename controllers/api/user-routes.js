@@ -85,6 +85,16 @@ router.post('/login', (req, res) => {
 });
 
 // POST (logout) a user
+router.post('/logout', (req, res) => {
+    if(req.session.loggedIn) {
+        req.session.destroy(() => {
+            res.status(204).end();
+        });
+    }
+    else {
+        res.status(404).end();
+    }
+})
 
 // PUT (update) a user
 router.put('/:id', (req, res) => {
