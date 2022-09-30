@@ -14,16 +14,21 @@
           <a href="/">Basic User System</a>
         </h1>
         <nav>
+          {{#if loggedIn}}
           <button id="logout" class="btn-no-style">logout</button>
+          {{else}}
           <a href="/login">Login</a>
-          <a href="/signup">Sign Up</a>
+          <a href="/signup">Sign Up<a>
+          {{/if}}
         </nav>
       </header>
         <main>
             {{{ body }}}
         </main>
     </div>
+    {{#if loggedIn}}
     <script src="/javascript/logout.js"></script>
+    {{/if}}
   </body>
 
 </html>
