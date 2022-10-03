@@ -1,0 +1,58 @@
+/* nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  max-width: 70%;
+} */
+
+body {
+  background-color: rgb(230, 230, 230);
+}
+
+/* header {
+  display: flex;
+
+  justify-content: space-between;
+  background-color: aqua;
+  color: black;
+} */
+
+/* h1 {
+  margin-bottom: 0;
+} */
+
+a {
+  text-decoration: none;
+  padding: 0 2em;
+  margin-right: -19px;
+}
+
+a:hover, a:visited {
+    color: black;
+}
+
+/* .login-options {
+  display: flex;
+  justify-content: flex-end;
+}  */
+
+.wrapper {
+  background-color: white;
+  height: 100vh;
+}
+
+.card {
+    /* box-shadow: 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
+    /* border-radius: 5px; */
+    /* border-top: solid 4px lightgray; */
+    height: 45vh;
+    margin: 0 auto;
+    /* position: relative; */
+    width: 50vw;
+
+}
+
+header {
+  font-family: 'Shadows Into Light', cursive;
+}
