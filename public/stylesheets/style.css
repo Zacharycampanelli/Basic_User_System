@@ -24,8 +24,7 @@ body {
 
 a {
   text-decoration: none;
-  padding: 0 2em;
-  margin-right: -19px;
+  /* margin-right: -19px; */
 }
 
 a:hover, a:visited {

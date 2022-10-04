@@ -1,12 +1,14 @@
 <article class="post">
-    <div class="post-title">
-        <a href="/post/{{post.id}}" target="_blank">{{post.title}}</a>
+    <div class="post-title fs-5 fw-bold mb-2">
+        <a href="/post/{{id}}" target="_blank">{{title}}</a>
     </div>
-    <div class="post-body">
-        {{post.bodyText}}
-        {{post.photoUrl}}
+    <div class="post-body mb-1">
+        {{bodyText}}
+        <br>
+        {{photoUrl}}
     </div>
     <div class="post-info">
-        {{post.user.username}} on {post.created_at}
+        {{user.username}} on {{created_at}}
     </div>
 </article>
+
