@@ -1,4 +1,13 @@
-const User = require('./User')
-const Entry = require('./Entry')
+const User = require('./User');
+const Post = require('./Post');
 
-module.exports = { User, Entry }
+User.hasMany(Post, {
+    foreignKey: 'userId'
+});
+
+Post.belongsTo(User, {
+    foreignKey: 'userId',
+    onDelete: 'SET NULL'
+})
+
+module.exports = { User, Post };
