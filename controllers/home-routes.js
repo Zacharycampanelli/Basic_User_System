@@ -4,27 +4,23 @@ const { User, Post } = require('../models');
 
 router.get('/', (req, res) => {
   Post.findAll({
-    attributes: [
-      'id', 'title','bodyText', 'photoUrl',
-    ],
+    attributes: ['id', 'title', 'bodyText', 'photoUrl', 'created_at'],
     include: [
       {
         model: User,
-        attributes: 'username'
+        attributes: ['username'],
       }
     ]
+  }).then(dbPostData => {
+    const posts = dbPostData.map(post => post.get({ plain: true }));
+    res.render('homepage', {
+      posts,
+      loggedIn: req.session.loggedIn,
+    });
   })
-  .then(dbPostData => {
-    if(!dbPostData) {
-      res.status(404).json({ message: 'No post found with this id!'})
-      return;
-    }
-    res.json(dbUserData);
-})
-
-   
-  res.render('homepage', {
-    loggedIn: req.session.loggedIn,
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
   });
 });
 
