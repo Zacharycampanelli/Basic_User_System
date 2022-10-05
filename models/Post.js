@@ -20,7 +20,7 @@ Post.init(
       allowNull: false,
     },
     photoUrl: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: true
     },
     userId: {
