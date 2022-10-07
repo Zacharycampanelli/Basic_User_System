@@ -1,0 +1,55 @@
+// Imports
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+// Global Variables
+
+/// Fonts
+$main-text: 'Share-TechMono', sans-serif;
+
+/// Colors
+$light-grey: #e0e0e0;
+
+/// Main content
+// body {
+//     background-color: $main-text;
+// }
+
+.wrapper {
+  background-color: white;
+  height: 100vh;
+}
+
+/// Text and Links
+
+.login-link {
+  font-size: 1.2rem;
+  margin-left: 1.5rem;
+}
+
+a,
+a:hover,
+a:visited {
+  color: black;
+  text-decoration: none;
+
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+/// Layout
+header {
+  font-family: $main-text;
+  background-color: $light-grey;
+}
+
+//// Header
+.banner {
+    background-color: $light-grey;
+}
+
+.banner-title {
+    font-size: 4.5rem;
+    font-family: $main-text;
+}

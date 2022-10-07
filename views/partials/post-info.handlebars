@@ -1,11 +1,11 @@
-<article class="post my-2">
+<article class="post my-2 p-2">
     <div class="post-title fs-5 fw-bold mb-2">
         <a href="/post/{{id}}" target="_blank">{{title}}</a>
     </div>
     <div class="post-body mb-1 d-flex justify-content-between">
-        <div class="col-8">{{bodyText}}</div>
+        <div class="">{{bodyText}}</div>
         {{!-- <br> --}}
-         <div class="col-3"><img src={{photoUrl}} class="img-fluid post-img"/></div>
+         <div class=""><img src={{photoUrl}} class="img-fluid post-img"/></div>
     </div>
     <div class="post-info">
         <span class="fw-bold">{{user.username}}</span> on {{format_date created_at}}

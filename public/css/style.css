@@ -27,8 +27,9 @@ a {
   /* margin-right: -19px; */
 }
 
-a:hover, a:visited {
-    color: black;
+a:hover,
+a:visited {
+  color: black;
 }
 
 /* .login-options {
@@ -41,22 +42,29 @@ a:hover, a:visited {
   height: 100vh;
 }
 
-.card {
-    /* box-shadow: 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
-    /* border-radius: 5px; */
-    /* border-top: solid 4px lightgray; */
-    height: 55vh;
-    margin: 0 auto;
-    /* position: relative; */
-    width: 50vw;
-
+header {
+  font-family: 'Share-TechMono', sans-serif;
+  background-color: #e0e0e0;
 }
 
-header {
-  font-family: 'Shadows Into Light', cursive;
+h1 {
+  font-size: 3.5rem;
+}
+
+.login-link {
+  font-size: 1.2rem;
+  margin-left: 1.5rem;
+}
+
+.banner {
+  background-color: #e0e0e0;
+}
+
+.banner-title {
+  font-size: 4.5rem;
+  font-family: 'Share-TechMono', sans-serif;
 }
 
 .post-img {
   /* width: 20%; */
-
 }

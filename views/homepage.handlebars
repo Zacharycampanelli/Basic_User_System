@@ -1,16 +1,18 @@
-<div class='card my-3'>
-  {{!-- <div class='card-body d-flex flex-column justify-content-center'> --}}
-    <div class="mt-0 p-5 bg-primary text-white rounded border-bottom">
-    <h2 class='card-title text-center'>Welcome to Your Digital Notebook</h2>
+<div class="banner d-flex flex-column align-items-start mt-0 p-5 text-dark rounded border-bottom">
+    <h2 class='banner-title text-center'>Endless Knowledge...</h2>
+    <p>is right at your fingertips. A place to talk anything tec</p>
 
-<ul class="list-group">
-{{#each posts as |post| }}
-<li class="list-group-item d-flex justify-content-between align-items-center">
-  {{> post-info post}}
-</li>
-{{/each}}
-</ul>
+    <button class="start-modal rounded-pill">Start Now</button>
 </div>
+<div class="d-flex flex-column align-items-start col-6">
+<ul class="list-group">
+  {{#each posts as |post| }}
+  <li class="list-group-item border-0 d-flex justify-content-between align-items-center">
+    {{> post-info post}}
+  </li>
+  {{/each}}
+</ul>
+
     {{!-- {{#if loggedIn}}
       {{! <a href=""></a> }}
       <h2>{{user.username}}</h2>
