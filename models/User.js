@@ -35,6 +35,10 @@ User.init(
         len: [8],
       },
     },
+    // photoUrl: {
+    //   type: DataTypes.TEXT,
+    //   allowNull: true
+    // },
   },
   {
     hooks: {

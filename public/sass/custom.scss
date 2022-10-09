@@ -34,8 +34,8 @@ a:visited {
 
 }
 
-h1 {
-  font-size: 3.5rem;
+.title {
+  font-size: 3.0rem;
 }
 
 /// Layout
@@ -52,4 +52,23 @@ header {
 .banner-title {
     font-size: 4.5rem;
     font-family: $main-text;
+    margin-left: -0.5rem;
+}
+
+/// Posts
+.post-content {
+    max-width: 30rem;
+    width: 30rem;
+}
+
+.post-title {
+    font-size: 1.45rem;
+}
+
+.post-text {
+    // display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200ch;
 }

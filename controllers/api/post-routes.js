@@ -21,26 +21,7 @@ router.get('/', (req, res) => {
     });
 });
 
-// GET /api/users/:userId/:id
-// Retrieves all posts by a single user
-router.get('/:id', (req, res) => {
-  Post.findAll({
-    where: {
-      userId: req.body.userId,
-    },
-    attributes: ['id', 'title', 'bodyText', 'photoUrl', 'userId'],
-  })
-    .then((dbPostData) => {
-      if (!dbPostData) {
-        res.status(404).json({ message: 'No post found!' });
-        return;
-      }
-      res.json(dbPostData);
-    })
-    .catch((err) => {
-      res.status(500).json(err);
-    });
-});
+
 
 // GET /api/posts/:id
 // Retrieves a single saved note

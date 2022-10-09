@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Post } = require('../../models');
 
 // GET all users
 router.get('/', (req, res) => {
@@ -28,6 +28,27 @@ router.get('/:id', (req, res) => {
         return;
       }
       res.json(dbUserData);
+    })
+    .catch((err) => {
+      res.status(500).json(err);
+    });
+});
+
+// GET /api/users/:userId/posts
+// Retrieves all posts by a single user
+router.get('/:userId/posts', (req, res) => {
+  Post.findAll({
+    where: {
+      userId: req.params.userId,
+    },
+    attributes: ['id', 'title', 'bodyText', 'photoUrl', 'userId'],
+  })
+    .then((dbPostData) => {
+      if (!dbPostData) {
+        res.status(404).json({ message: 'No post found!' });
+        return;
+      }
+      res.json(dbPostData);
     })
     .catch((err) => {
       res.status(500).json(err);

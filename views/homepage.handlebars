@@ -1,24 +1,126 @@
-<div class="banner d-flex flex-column align-items-start mt-0 p-5 text-dark rounded border-bottom">
-    <h2 class='banner-title text-center'>Endless Knowledge...</h2>
-    <p>is right at your fingertips. A place to talk anything tec</p>
+<div
+  class='banner d-flex flex-column align-items-start mt-0 p-5 text-dark border-top border-bottom border-secondary border-2'
+>
+  <div class='col-6'>
+    <h2 class='banner-title text-left'>Endless Knowledge...</h2>
+    <p class='fs-4 mt-2'>Right at your fingertips. Where will you choose to begin?</p>
+    {{! <a href="#myModal" role="button" class="btn btn-lg btn-primary" data-bs-toggle="modal">Launch Demo Modal</a> }}
 
-    <button class="start-modal rounded-pill">Start Now</button>
-</div>
-<div class="d-flex flex-column align-items-start col-6">
-<ul class="list-group">
-  {{#each posts as |post| }}
-  <li class="list-group-item border-0 d-flex justify-content-between align-items-center">
-    {{> post-info post}}
-  </li>
-  {{/each}}
-</ul>
-
-    {{!-- {{#if loggedIn}}
-      {{! <a href=""></a> }}
-      <h2>{{user.username}}</h2>
-    {{else}}
-      <a href='/signup' class='btn btn-primary text-white mx-auto mt-4'> Get Started Now!</a>
-    {{/if}} --}}
-    
+    <button
+      type='button'
+      class='start-modal rounded-pill btn btn-dark px-5 mt-4'
+      data-bs-toggle='modal'
+      data-bs-target='#signupModal'
+    >Start Now</button>
+    {{! <button type="button" class='start-modal rounded-pill btn btn-dark px-5 mt-4' data-bs-toggle="modal" data-bs-target="#signup-modal">Start Now</button> }}
   </div>
 </div>
+
+<div class='d-flex flex-column align-items-start col-6'>
+  <ul class='list-group'>
+    {{#each posts as |post|}}
+      <li class='list-group-item border-0 ms-3'>
+        {{!-- {{> post-info post}} --}}
+      </li>
+    {{/each}}
+  </ul>
+
+</div>
+
+<div id='signupModal' class='modal fade' tabindex='-1'>
+  <div class='modal-dialog'>
+    <div class='modal-content'>
+      <div class='modal-header'>
+        <h5 class='modal-title'>Join tech_talk today!</h5>
+        <button type='button' class='btn-close' data-bs-dismiss='modal'></button>
+      </div>
+      <div class='modal-body d-flex justify-content-around'>
+        {{! Signup Modal }}
+        {{!-- {{else}} --}}
+        <form class='signup-form ms-3'>
+          <div>
+            <label class='form-label' for='signup-email'>Email:</label>
+            <input class='form-control' type='text' id='signup-email' />
+          </div>
+          <div>
+            <label class='form-label' for='signup-username'>Username:</label>
+            <input class='form-control' type='text' id='signup-username' />
+          </div>
+          <div>
+            <label class='form-label' for='signup-password'>Password:</label>
+            <input class='form-control' type='password' id='signup-password' />
+          </div>
+          <div>
+            <button class='btn btn-primary mt-4' type='submit'>Sign Up</button>
+          </div>
+        </form>
+        <div class='col-4 text-center m-2'>
+          <p>Already a member?</p>
+          <button
+            type='button'
+            class='start-modal rounded-pill btn btn-dark mt-4'
+            data-bs-dismiss='modal'
+            data-bs-toggle='modal'
+            data-bs-target='#loginModal'
+          >Start Now</button>
+
+        </div>
+      </div>
+      <div class='modal-footer'>
+        <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Cancel</button>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div id='loginModal' class='modal fade' tabindex='-1'>
+  <div class='modal-dialog'>
+    <div class='modal-content'>
+      <div class='modal-header'>
+        <h5 class='modal-title'>Join tech_talk today!</h5>
+        <button type='button' class='btn-close' data-bs-dismiss='modal'></button>
+      </div>
+      <div class='modal-body d-flex justify-content-around'>
+        {{! Signup Modal }}
+        {{!-- {{else}} --}}
+        <form class='login-form ms-3'>
+          <div>
+            <label class='form-label' for='login-email'>Email:</label>
+            <input class='form-control' type='text' id='login-email' />
+          </div>
+          <div>
+            <label class='form-label' for='login-password'>Password:</label>
+            <input class='form-control' type='password' id='login-password' />
+          </div>
+          <div>
+            <button class='btn btn-primary mt-4' type='submit'>Login</button>
+          </div>
+        </form>
+        <div class='col-4 text-center m-2'>
+          <p>New to tech_talk?</p>
+          <button
+            type='button'
+            class='start-modal rounded-pill btn btn-dark mt-4'
+            data-bs-dismiss='modal'
+            data-bs-toggle='modal'
+            data-bs-target='#signupModal'
+          >Start Now</button>
+        </div>
+        </div>
+        <div class='modal-footer'>
+          <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Cancel</button>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+{{!-- {{/if}} --}}
+{{! Login Modal }}
+{{!-- {{#if loggedIn}} --}}
+
+<script src='/javascript/signup.js'></script>
+<script src='/javascript/login.js'></script>
